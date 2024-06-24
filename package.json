@@ -1,0 +1,27 @@
+{
+  "name": "rn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "bundle-android": "react-native bundle --platform android --entry-file index.js --reset-cache --bundle-output android/src/main/res/assets/index.android.bundle --assets-dest android/src/main/res/ --dev false",
+    "bundle-ios": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ./ios/main.jsbundle",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-native": "0.66.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.70.3",
+    "react-test-renderer": "18.0.0",
+    "patch-package": "^6.5.1",
+    "postinstall-postinstall": "^2.1.0"
+  }
+}

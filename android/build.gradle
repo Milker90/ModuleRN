@@ -1,0 +1,54 @@
+import java.nio.file.Paths
+
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.2.1")
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'com.library.rrreactnative'
+    compileSdk 34
+    defaultConfig {
+        minSdk 22
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildFeatures {
+        buildConfig true // 启用 BuildConfig 特性
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "DEBUG", "true"
+        }
+        release {
+            buildConfigField "boolean", "DEBUG", "false"
+        }
+    }
+
+}
+
+def reactNativeRootDir = new File(rootProject.projectDir, '../node_modules/react-native')
+
+repositories {
+    maven {
+        url "${reactNativeRootDir}/android"
+    }
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'org.webkit:android-jsc:+'
+}
+
