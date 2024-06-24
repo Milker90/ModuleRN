@@ -3,8 +3,8 @@ import React from 'react'
 
 const Test = () => {
   return (
-    <View>
-      <Text>Test</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Test1</Text>
       <Image style={{ width: 100, height: 100 }} source={require('../assets/images/youtube.png')} />
     </View>
   )

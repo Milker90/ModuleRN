@@ -19,7 +19,7 @@
     [super viewDidLoad];
         
     NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"main" fallbackURLProvider:^NSURL *{
-        return [NSURL URLWithString:@"http://10.2.97.252:8081/index.bundle?platform=ios"];
+        return [NSURL URLWithString:@"http://192.168.1.101:8081/index.bundle?platform=ios"];
     }];
     if (jsCodeLocation == nil) {
         return;
