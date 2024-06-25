@@ -1,4 +1,4 @@
-package com.library.rrreactnative;
+package com.library.modulern;
 
 import android.app.Activity;
 

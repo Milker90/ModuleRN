@@ -13,7 +13,7 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    namespace 'com.library.rrreactnative'
+    namespace 'com.library.modulern'
     compileSdk 34
     defaultConfig {
         minSdk 22

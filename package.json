@@ -4,9 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "bundle-android": "react-native bundle --platform android --entry-file index.js --reset-cache --bundle-output android/src/main/res/assets/index.android.bundle --assets-dest android/src/main/res/ --dev false",
+    "bundle-android": "react-native bundle --platform android --entry-file index.js --reset-cache --bundle-output android/src/main/assets/index.android.bundle --assets-dest android/src/main/ --dev false",
     "bundle-ios": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ./ios/main.jsbundle",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "start": "react-native start"
   },
   "dependencies": {
     "react": "17.0.2",
